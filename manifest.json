@@ -1,0 +1,47 @@
+{
+  "version": "V2",
+  "pipelines": [
+    {
+      "pipelineName": "pipeline_teste_1",
+      "pipelineDescription": "Trigger pipeline to test trigger between repos",
+      "outputDataModelName": "pipelinetest1",
+      "overlapDeltaMinutes": 180,
+      "cronExpressions": [
+        "0 0 5 ? * * *"
+      ],
+      "timeZone": "America/Sao_Paulo",
+      "processScript": "pipelines/pipeline_teste_1.csql",
+      "sourceEntities": {
+        "stagings": []
+      },
+      "sendTo": {
+        "bigquery": {
+          "customer": false,
+          "unified": true
+        },
+        "subscriptions": {
+          "customer": false,
+          "unified": true
+        },
+        "realtime": false
+      },
+      "clear": {
+        "bigquery": {
+          "unified": false,
+          "customer": false
+        },
+        "subscriptions": {
+          "unified": false,
+          "customer": false
+        },
+        "realtime": false
+      },
+      "nextPipeline": "pipeline_teste_2.csql",
+      "fanOut": false,
+      "useBatchObservability": false,
+      "useBatchSQLEfficiency": false,
+      "checkExistsDataToProcess": false,
+      "additionalParameters": {}
+    }
+  ]
+}
