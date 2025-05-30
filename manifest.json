@@ -4,7 +4,7 @@
     {
       "pipelineName": "pipeline_teste_1",
       "pipelineDescription": "Trigger pipeline to test trigger between repos",
-      "outputDataModelName": "pipelinetest1",
+      "outputDataModelName": "pipelineteste1",
       "overlapDeltaMinutes": 180,
       "cronExpressions": [
         "0 0 5 ? * * *"
