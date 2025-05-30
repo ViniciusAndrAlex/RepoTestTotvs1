@@ -36,7 +36,7 @@
         },
         "realtime": false
       },
-      "nextPipeline": "pipeline_teste_2.csql",
+      "nextPipelines": ["pipeline_teste_2"],
       "fanOut": false,
       "useBatchObservability": false,
       "useBatchSQLEfficiency": false,
